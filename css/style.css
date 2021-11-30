@@ -838,7 +838,7 @@ h2 {
 }
 
 .inspired-body,
-.two {
+.two-inspired {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -846,7 +846,7 @@ h2 {
 }
 
 .inspired-body__img,
-.two__img {
+.two-inspired__img {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -855,7 +855,7 @@ h2 {
 }
 
 .inspired-body__img::after,
-.two__img::after {
+.two-inspired__img::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -867,12 +867,12 @@ h2 {
 }
 
 .inspired-body__img:hover::after,
-.two__img:hover::after {
+.two-inspired__img:hover::after {
   background: rgba(21, 24, 36, 0.5);
 }
 
 .inspired-body__img img,
-.two__img img {
+.two-inspired__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -880,12 +880,12 @@ h2 {
 }
 
 .inspired-body .text,
-.two .text {
+.two-inspired .text {
   position: absolute;
-  left: 35px;
-  bottom: 50px;
+  left: 10%;
+  bottom: 10%;
   color: #fff;
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 700;
   z-index: 5;
   cursor: pointer;
@@ -894,12 +894,31 @@ h2 {
   transition: 0.7s;
 }
 
+@media (max-width: 992px) {
+  .inspired-body .text,
+  .two-inspired .text {
+    font-size: 2.125rem;
+  }
+}
+
+@media (max-width: 778px) {
+  .inspired-body .text,
+  .two-inspired .text {
+    font-size: 1.5rem;
+  }
+}
+
 .inspired-body__img:hover .text,
-.two__img:hover .text {
+.two-inspired__img:hover .text {
   opacity: 1;
 }
 
-.two .inspired-body__img {
+.two-inspired {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.two-inspired__img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 33.333%;
           flex: 1 1 33.333%;

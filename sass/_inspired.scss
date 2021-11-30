@@ -14,7 +14,7 @@
 	@extend %line;
 }
 .inspired-body,
-.two {
+.two-inspired {
 	display: flex;
 	gap: 10px;
 	&__img {
@@ -43,25 +43,42 @@
 	}
 	& .text {
 		position: absolute;
-		left: 35px;
-		bottom: 50px;
+		left: 10%;
+		bottom: 10%;
 		color: $white;
-		font-size: 50px;
+		font-size: 3.125rem;
 		font-weight: $fwb;
 		z-index: 5;
 		cursor: pointer;
 		opacity: 0;
 		transition: 0.7s;
+		@media (max-width: 992px) {
+			font-size: 2.125rem;
+		}
+		@media (max-width: 778px) {
+			font-size: 1.5rem;
+		}
 	}
 	&__img:hover .text {
 		opacity: 1;
 	}
 }
-.two {
-	.inspired-body__img {
+.two-inspired {
+	flex-wrap: wrap;
+	&__img {
 		flex: 1 1 33.333%;
+
+		// @media (max-width: 992px) {
+		// 	flex: 1 1 50%;
+		// }
+		// @media (max-width: 778px) {
+		// 	flex: 1 1 100%;
+		// }
 	}
 }
+.text {
+}
+
 // Не получается сдедать ссылкой изображение,
 // так как на него наложен after,
 // и не получается соответсвенно нажать на маску
