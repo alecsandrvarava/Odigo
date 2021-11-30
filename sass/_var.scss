@@ -1,0 +1,66 @@
+$lato: "Lato", sans-serif;
+$fz: 1rem;
+$fz18: 18px;
+$fw: 400;
+$fwb: 700;
+$color-footer: #0e1d28;
+$white: #fff;
+$black: #000;
+$bgbutton: #1b7dff;
+$color-title: #102746;
+
+%arrow {
+	color: #006dfe;
+	cursor: pointer;
+	height: 20px;
+	line-height: 20px;
+	transition: 0.3s;
+	&::after {
+		content: url(../svg/arrow.svg);
+		position: relative;
+		top: -1.5px;
+		left: 0px;
+		margin-left: 25px;
+		transition: 0.5s;
+		@media (max-width: 400px) {
+			display: none;
+		}
+	}
+	&:hover::after {
+		margin-left: 35px;
+		@media (max-width: 991px) {
+			margin-left: 25px;
+		}
+	}
+	&:active {
+		line-height: 25px;
+	}
+}
+%line {
+	&::after {
+		content: "";
+		display: block;
+		margin: 12px 0 0 0;
+		background-color: #006dfe;
+		width: 250px;
+		height: 3px;
+	}
+}
+.btn {
+	font-size: 1.5rem;
+	color: #fff;
+	padding: 0.62em 1.45em;
+	display: inline-block;
+	outline: none;
+	border: none;
+	background-color: #1b7dff;
+	cursor: pointer;
+	overflow: hidden;
+	vertical-align: top;
+	height: 2.5em;
+	line-height: 1.33em;
+	@media (max-width: 778px) {
+		font-size: 1.25rem;
+	}
+}
+// @extend %arrow;

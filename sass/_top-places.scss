@@ -1,0 +1,100 @@
+.top-places {
+	&__h2 {
+		@extend %line;
+		margin-bottom: 60px;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+	&__item {
+		flex: 1 1 33.333%;
+		margin-bottom: 50px;
+		padding: 0 20px;
+		@media (max-width: 992px) {
+			flex: 1 1 50%;
+		}
+		&:last-child {
+			margin-bottom: 150px;
+		}
+	}
+}
+.top-item {
+	&__img {
+		position: relative;
+		margin-bottom: 35px;
+		padding: 150px 0;
+		overflow: hidden;
+		&:hover img {
+			object-position: bottom;
+			@media (max-width: 900px) {
+				transform: scale(1.1);
+				object-position: center;
+			}
+		}
+		& img {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			transition: 2s;
+		}
+	}
+	&__text {
+		padding: 0 10px 0 0;
+		margin-bottom: 35px;
+	}
+	&__link {
+	}
+}
+.billet {
+	position: relative;
+	left: 0;
+	top: 150px;
+	color: $white;
+	font-size: $fz18;
+	padding: 20px 15px;
+	display: flex;
+	justify-content: space-between;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: $black;
+		opacity: 0.5;
+		width: 100%;
+		padding: 30px 0;
+	}
+
+	&__text {
+		display: block;
+		position: relative;
+		text-transform: uppercase;
+	}
+
+	&__hart {
+		position: relative;
+		padding-right: 15px;
+		&::after {
+			content: url(../img/Hart.png);
+			margin-left: 10px;
+		}
+	}
+
+	&__shape {
+		position: relative;
+		&::after {
+			content: url(../img/Shape.png);
+			margin-left: 10px;
+		}
+	}
+}
