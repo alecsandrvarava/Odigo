@@ -924,6 +924,22 @@ h2 {
           flex: 1 1 33.333%;
 }
 
+@media (max-width: 992px) {
+  .two-inspired__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 778px) {
+  .two-inspired__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
 .attraction {
   margin-bottom: 100px;
 }
