@@ -1,5 +1,9 @@
 .attraction {
 	margin-bottom: 100px;
+	position: relative;
+	@media (max-width: 768px) {
+		margin-bottom: 10px;
+	}
 }
 .attraction {
 	&__items {
@@ -8,15 +12,36 @@
 	}
 	&__item {
 	}
+	&__link,
+	&__two-link {
+		@extend %arrow;
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+	&__sub-link,
+	&__sub-two-link {
+		@extend %arrow;
+		margin: 10px 10px 30px 0;
+		display: flex;
+		justify-content: flex-end;
+
+		@media (min-width: 769px) {
+			display: none;
+		}
+	}
 }
+
 .item {
 	display: flex;
 	@media (max-width: 768px) {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		flex: 1 1 100%;
 	}
 	&:not(:last-child) {
-		margin-bottom: 50px;
+		@media (min-width: 769px) {
+			margin-bottom: 50px;
+		}
 	}
 	&__img {
 		position: relative;
@@ -62,23 +87,29 @@
 		}
 	}
 	&__text h3 {
-		font-size: 30px;
-		margin-bottom: 40px;
+		font-size: 1.875rem;
+		margin-bottom: 1.33em;
+		@media (max-width: 768px) {
+			margin-bottom: 1em;
+		}
 	}
 	&__text p {
 		line-height: 24px;
 		margin-bottom: 40px;
+		@media (max-width: 768px) {
+			margin-bottom: 1.875em;
+		}
 	}
-	&__text a {
-		@extend %arrow;
-	}
+	// &__text a {
+	// 	@extend %arrow;
+	// }
 }
 .item-revers {
 	display: flex;
 	flex-direction: row-reverse;
 	@media (max-width: 768px) {
 		flex: 1 1 100%;
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 	&__img {
 		position: relative;
@@ -136,48 +167,3 @@
 		}
 	}
 }
-// Не получилось сделать увеличение картинки при hover без изменения блока родителя
-// и так же не получилось сделать движение стрелочки
-// при hover на ссылку  VIEW ALL вправо, отодвигатся сам текст влево
-
-// [data-aos="new-animation"] {
-// 	opacity: 0;
-// 	transition-property: transform, opacity;
-
-// 	&.aos-animate {
-// 		opacity: 1;
-// 	}
-// 	@media screen and (max-width: 992px) {
-// 		&.aos-animate {
-// 			display: none;
-// 		}
-// 	}
-// }
-// [data-aos="new-animation_1"] {
-// 	opacity: 0;
-// 	transition-property: transform, opacity;
-
-// 	&.aos-animate {
-// 		opacity: 1;
-// 	}
-// 	@media screen and (max-width: 992px) {
-// 		&.aos-animate {
-// 			display: none;
-// 		}
-// 	}
-// }
-// [data-aos="new-animation_3"] {
-// 	opacity: 0;
-// 	transform: translateY(100px);
-// 	transition-property: transform, opacity;
-
-// 	&.aos-animate {
-// 		opacity: 1;
-// 		transform: translateY(0);
-// 	}
-// 	@media screen and (max-width: 992px) {
-// 		&.aos-animate {
-// 			display: none;
-// 		}
-// 	}
-// }

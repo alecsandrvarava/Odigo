@@ -22,9 +22,9 @@ $color-title: #102746;
 		left: 0px;
 		margin-left: 25px;
 		transition: 0.5s;
-		// @media (max-width: 768px) {
-		// 	display: none;
-		// }
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
 	&:hover::after {
 		margin-left: 35px;

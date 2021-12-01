@@ -53,10 +53,11 @@ h2 {
 	font-size: 2.18rem;
 }
 .btn {
+	width: 170px;
 	font-size: 24px;
 	color: $white;
 	padding: 15px 35px;
-	display: inline-block;
+	display: block;
 	outline: none;
 	border: none;
 	background-color: $bgbutton;
