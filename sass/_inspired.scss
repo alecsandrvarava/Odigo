@@ -4,23 +4,52 @@
 }
 .inspired-container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: 40px;
 }
 .inspired-link {
+	flex: 1 1 20%;
+	justify-content: center;
+	display: block;
 	@extend %arrow;
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+.inspired-sublink {
+	@extend %arrow;
+	position: relative;
+	top: 20px;
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 10px;
+	@media (min-width: 767px) {
+		display: none;
+	}
 }
 .inspired-h2 {
+	flex: 1 1 80%;
+	padding-right: 10px;
 	@extend %line;
+	@media (max-width: 992px) {
+		font-size: 1.875rem;
+	}
 }
 .inspired-body,
 .two-inspired {
 	display: flex;
-	gap: 10px;
+	column-gap: 10px;
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+	}
 	&__img {
 		position: relative;
 		flex: 1 1 50%;
 		margin-bottom: 10px;
+		@media (max-width: 992px) {
+			flex: 1 1 100%;
+		}
 		&::after {
 			content: "";
 			position: absolute;
@@ -52,11 +81,8 @@
 		cursor: pointer;
 		opacity: 0;
 		transition: 0.7s;
-		@media (max-width: 992px) {
-			font-size: 2.125rem;
-		}
 		@media (max-width: 778px) {
-			font-size: 1.5rem;
+			font-size: 2.25rem;
 		}
 	}
 	&__img:hover .text {
@@ -64,15 +90,21 @@
 	}
 }
 .two-inspired {
-	flex-wrap: wrap;
+	@media (max-width: 992px) {
+		flex-wrap: wrap;
+	}
 	&__img {
 		flex: 1 1 33.333%;
-
 		@media (max-width: 992px) {
-			flex: 1 1 50%;
+			flex: 1 1 49%;
 		}
 		@media (max-width: 778px) {
-			flex: 1 1 100%;
+			display: none;
+		}
+	}
+	&__img:last-child {
+		@media (max-width: 992px) {
+			display: none;
 		}
 	}
 }
