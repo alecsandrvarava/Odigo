@@ -1,7 +1,14 @@
 .top-places {
+	margin-bottom: 50px;
+	@media (max-width: 768px) {
+		margin-bottom: 30px;
+	}
 	&__h2 {
 		@extend %line;
-		margin-bottom: 60px;
+
+		@media (max-width: 768px) {
+			margin-bottom: 0px;
+		}
 	}
 	&__items {
 		display: flex;
@@ -18,9 +25,15 @@
 		@media (max-width: 992px) {
 			flex: 1 1 50%;
 		}
-		&:last-child {
-			margin-bottom: 150px;
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
 		}
+		// &:last-child {
+		// 	margin-bottom: 150px;
+		// 	@media (max-width: 768px) {
+		// 		margin-bottom: 0px;
+		// 	}
+		// }
 	}
 }
 .top-item {
@@ -29,6 +42,10 @@
 		margin-bottom: 35px;
 		padding: 150px 0;
 		overflow: hidden;
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
+			padding: 120px 0;
+		}
 		&:hover img {
 			object-position: bottom;
 			@media (max-width: 900px) {
@@ -51,6 +68,9 @@
 	&__text {
 		padding: 0 10px 0 0;
 		margin-bottom: 35px;
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
+		}
 	}
 	&__link {
 	}
@@ -68,25 +88,35 @@
 		content: "";
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: 2px;
 		background-color: $black;
 		opacity: 0.5;
 		width: 100%;
 		padding: 30px 0;
+		@media (max-width: 768px) {
+			top: -28px;
+		}
 	}
 
 	&__text {
 		display: block;
 		position: relative;
 		text-transform: uppercase;
+		@media (max-width: 768px) {
+			top: -28px;
+		}
 	}
-
+	&__img {
+	}
 	&__hart {
 		position: relative;
 		padding-right: 15px;
 		&::after {
 			content: url(../img/Hart.png);
 			margin-left: 10px;
+		}
+		@media (max-width: 768px) {
+			top: -28px;
 		}
 	}
 
@@ -95,6 +125,9 @@
 		&::after {
 			content: url(../img/Shape.png);
 			margin-left: 10px;
+		}
+		@media (max-width: 768px) {
+			top: -28px;
 		}
 	}
 }

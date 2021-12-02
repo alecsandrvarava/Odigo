@@ -51,21 +51,26 @@ h2 {
 	font-weight: $fw;
 	color: $color-title;
 	font-size: 2.18rem;
+	@media (max-width: 768px) {
+		font-size: 1.875rem;
+	}
 }
 .btn {
-	width: 170px;
-	font-size: 24px;
-	color: $white;
-	padding: 15px 35px;
-	display: block;
+	font-size: 1.5rem;
+	color: #fff;
+	padding: 0.62em 1.45em;
+	display: inline-block;
 	outline: none;
 	border: none;
-	background-color: $bgbutton;
+	background-color: #1b7dff;
 	cursor: pointer;
 	overflow: hidden;
 	vertical-align: top;
-	height: 60px;
-	line-height: 32px;
+	height: 2.5em;
+	line-height: 1.33em;
+	@media (max-width: 778px) {
+		font-size: 1.25rem;
+	}
 	&:focus-visible {
 		box-shadow: 0 0 0 3px lightskyblue;
 	}
@@ -77,8 +82,16 @@ h2 {
 	}
 }
 .video {
-	&__width {
-		width: 100vw;
-		height: 600px;
+	width: 100%;
+	height: 600px;
+	@media (max-width: 992px) {
+		height: 500px;
+	}
+	@media (max-width: 768px) {
+		height: 400px;
+	}
+	& iframe {
+		width: 100%;
+		height: 100%;
 	}
 }

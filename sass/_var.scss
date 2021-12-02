@@ -1,6 +1,6 @@
 $lato: "Lato", sans-serif;
 $fz: 1rem;
-$fz18: 18px;
+$fz18: 1.125rem;
 $fw: 400;
 $fwb: 700;
 $color-footer: #0e1d28;
@@ -50,21 +50,5 @@ $color-title: #102746;
 		}
 	}
 }
-.btn {
-	font-size: 1.5rem;
-	color: #fff;
-	padding: 0.62em 1.45em;
-	display: inline-block;
-	outline: none;
-	border: none;
-	background-color: #1b7dff;
-	cursor: pointer;
-	overflow: hidden;
-	vertical-align: top;
-	height: 2.5em;
-	line-height: 1.33em;
-	@media (max-width: 778px) {
-		font-size: 1.25rem;
-	}
-}
+
 // @extend %arrow;
