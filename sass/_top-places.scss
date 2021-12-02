@@ -4,10 +4,11 @@
 		margin-bottom: 30px;
 	}
 	&__h2 {
+		margin-bottom: 50px;
 		@extend %line;
 
 		@media (max-width: 768px) {
-			margin-bottom: 0px;
+			margin-bottom: 30px;
 		}
 	}
 	&__items {

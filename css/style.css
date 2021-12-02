@@ -1284,9 +1284,13 @@ h2 {
   }
 }
 
+.top-places__h2 {
+  margin-bottom: 50px;
+}
+
 @media (max-width: 768px) {
   .top-places__h2 {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
   }
 }
 
