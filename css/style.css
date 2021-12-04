@@ -365,7 +365,7 @@ h2 {
 
 @media (max-width: 768px) {
   .header__burger {
-    margin: 35px 15px 0 0;
+    margin: 35px 0px 0 0;
     cursor: pointer;
     display: block;
     position: relative;
@@ -401,19 +401,20 @@ h2 {
   .header__burger.active {
     position: fixed;
     right: 0;
+    margin: 35px 15px 0 0;
   }
   .header__burger.active::before {
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+            transform: rotate(45deg);
     top: 9px;
   }
   .header__burger.active span {
     -webkit-transform: scale(0);
-    transform: scale(0);
+            transform: scale(0);
   }
   .header__burger.active::after {
     -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+            transform: rotate(-45deg);
     bottom: 9px;
   }
 }
@@ -443,12 +444,12 @@ h2 {
 
 @media (max-width: 992px) {
   .home__body {
-    padding: 120px 0px 140px 0px;
+    padding: 120px 0px 145px 0px;
     margin-left: 0px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .home__body {
     padding: 90px 0px 115px 0px;
     margin: 0 auto;
@@ -458,20 +459,19 @@ h2 {
 .home__body h1 {
   max-width: 78%;
   color: #fff;
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 3.125rem;
+  line-height: 1.2em;
   margin-bottom: 22px;
-  padding: 0 20px;
 }
 
 @media (max-width: 992px) {
   .home__body h1 {
-    font-size: 40px;
-    margin: 70px 0 35px 50px;
+    font-size: 2.5rem;
+    margin: 70px 0 35px 70px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .home__body h1 {
     max-width: 100%;
     text-align: center;
@@ -481,20 +481,19 @@ h2 {
 }
 
 .home__body p {
-  padding: 0 20px;
-  max-width: 60%;
+  max-width: 58%;
   color: #fff;
-  line-height: 24px;
+  line-height: 1.5em;
   margin-bottom: 60px;
 }
 
 @media (max-width: 992px) {
   .home__body p {
-    margin-left: 50px;
+    margin-left: 70px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .home__body p {
     display: none;
   }
@@ -509,27 +508,32 @@ h2 {
           justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-  .home__form button {
-    margin-top: 15px;
-  }
+.home__form label {
+  position: relative;
+}
+
+.home__form label::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: -25px;
+  top: 0;
 }
 
 .home__form label::before {
   content: "";
   display: block;
-  position: relative;
-  bottom: -50px;
+  position: absolute;
+  left: -27px;
+  bottom: 20px;
   width: 300px;
   height: 3px;
   background: #fff;
   z-index: 5;
-}
-
-@media (max-width: 768px) {
-  .home__form label::before {
-    height: 2px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -540,7 +544,8 @@ h2 {
 
 @media (max-width: 768px) {
   .home__form label::before {
-    width: calc(100% - 30px);
+    width: 100%;
+    height: 2px;
   }
 }
 
@@ -555,7 +560,7 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -563,13 +568,14 @@ h2 {
   .home__form {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 120px;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .home__form {
-    padding: 0 0 0 30px;
+    padding: 0 0 0 0px;
+    margin: 0 0 0 40px;
   }
 }
 
@@ -593,15 +599,15 @@ h2 {
 @media (max-width: 992px) {
   .home__form input {
     width: calc(100% - 80px);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .home__form input {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 0 0 0 10px;
-    width: calc(100% - 30px);
+    width: calc(100% - 5px);
     font-size: 16px;
   }
 }
@@ -949,6 +955,13 @@ h2 {
   transition: 0.7s;
 }
 
+@media (max-width: 992px) {
+  .inspired-body__img::after,
+  .two-inspired__img::after {
+    background: rgba(21, 24, 36, 0.5);
+  }
+}
+
 .inspired-body__img:hover::after,
 .two-inspired__img:hover::after {
   background: rgba(21, 24, 36, 0.5);
@@ -977,7 +990,15 @@ h2 {
   transition: 0.7s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .inspired-body .text,
+  .two-inspired .text {
+    font-size: 2.812rem;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
   .inspired-body .text,
   .two-inspired .text {
     font-size: 2.25rem;
@@ -1012,7 +1033,9 @@ h2 {
 
 @media (max-width: 768px) {
   .two-inspired__img {
-    display: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }
 
