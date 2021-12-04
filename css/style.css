@@ -1516,6 +1516,17 @@ h2 {
   }
 }
 
+.footer__logo {
+  width: 200px;
+}
+
+.footer__logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .footer__logo {
     margin-bottom: 20px;
