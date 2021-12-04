@@ -4,7 +4,7 @@
 	z-index: 50;
 	width: 100%;
 	&__logo {
-		margin-top: 60px;
+		margin-top: 50px;
 		padding: 15px 5px;
 		@media (max-width: 768px) {
 			position: relative;
@@ -29,7 +29,7 @@
 			left: 0;
 			top: -100%;
 			overflow: auto;
-			background: linear-gradient(0deg, rgba(53, 66, 103, 0.4) -60%, #151824 40%);
+			background: #151824f8;
 			transition: 0.3s;
 		}
 		&.active {

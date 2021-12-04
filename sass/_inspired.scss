@@ -39,6 +39,25 @@
 		font-size: 1.875rem;
 	}
 }
+.link {
+	@media (max-width: 992px) {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			transition: 0.7s;
+			background: rgba(21, 24, 36, 0.5);
+		}
+	}
+}
 .inspired-body,
 .two-inspired {
 	display: flex;
@@ -61,14 +80,13 @@
 			top: 0;
 			left: 0;
 			transition: 0.7s;
-			@media (max-width: 992px) {
-				background: rgba(21, 24, 36, 0.5);
-			}
 		}
 	}
 	&__img:hover {
-		&::after {
-			background: rgba(21, 24, 36, 0.5);
+		@media (min-width: 992px) {
+			&::after {
+				background: rgba(21, 24, 36, 0.5);
+			}
 		}
 	}
 	&__img img {
@@ -77,13 +95,14 @@
 		object-fit: cover;
 	}
 	& .text {
+		display: block;
 		position: absolute;
 		left: 10%;
 		bottom: 10%;
 		color: $white;
 		font-size: 3.125rem;
 		font-weight: $fwb;
-		z-index: 5;
+		z-index: 10;
 		cursor: pointer;
 		opacity: 0;
 		transition: 0.7s;
@@ -93,6 +112,15 @@
 		}
 		@media (max-width: 767px) {
 			font-size: 2.25rem;
+		}
+		@media (min-width: 992px) {
+			&:hover {
+				background: transparent;
+				transform: scale(1.1);
+				&::after {
+					background: rgba(21, 24, 36, 0);
+				}
+			}
 		}
 	}
 	&__img:hover .text {
