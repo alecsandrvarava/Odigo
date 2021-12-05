@@ -158,25 +158,19 @@ h2 {
 }
 
 .video {
+  position: relative;
   width: 100%;
-  height: 600px;
+  padding-bottom: 56%;
 }
 
-@media (max-width: 992px) {
-  .video {
-    height: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .video {
-    height: 400px;
-  }
-}
-
-.video iframe {
+.video video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .benefits-body__link, .inspired-link, .inspired-sublink, .attraction__link, .attraction__two-link, .attraction__sub-link, .attraction__sub-two-link, .item-revers__text a {
