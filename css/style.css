@@ -383,7 +383,8 @@ h2 {
     left: 0;
     background-color: #fff;
     -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .header__burger::before {
     top: 0;
@@ -397,8 +398,8 @@ h2 {
     margin: 35px 15px 0 0;
   }
   .header__burger.active::before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
     top: 9px;
   }
   .header__burger.active span {
@@ -406,8 +407,8 @@ h2 {
             transform: scale(0);
   }
   .header__burger.active::after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg);
     bottom: 9px;
   }
 }
@@ -1589,6 +1590,13 @@ h2 {
 
 .footer__list li {
   margin-bottom: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__list li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .footer__list a {

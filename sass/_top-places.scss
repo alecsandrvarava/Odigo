@@ -6,7 +6,6 @@
 	&__h2 {
 		margin-bottom: 50px;
 		@extend %line;
-
 		@media (max-width: 768px) {
 			margin-bottom: 30px;
 		}
@@ -29,12 +28,6 @@
 		@media (max-width: 768px) {
 			margin-bottom: 30px;
 		}
-		// &:last-child {
-		// 	margin-bottom: 150px;
-		// 	@media (max-width: 768px) {
-		// 		margin-bottom: 0px;
-		// 	}
-		// }
 	}
 }
 .top-item {
@@ -120,7 +113,6 @@
 			top: -28px;
 		}
 	}
-
 	&__shape {
 		position: relative;
 		&::after {

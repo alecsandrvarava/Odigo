@@ -29,7 +29,7 @@
 				left: 0;
 				background-color: $white;
 				-webkit-transition: 0.3s;
-				transition: 0.3s;
+				transition: 0.5s;
 			}
 			&::before {
 				top: 0;
@@ -43,14 +43,14 @@
 				margin: 35px 15px 0 0;
 			}
 			&.active::before {
-				transform: rotate(45deg);
+				transform: rotate(405deg);
 				top: 9px;
 			}
 			&.active span {
 				transform: scale(0);
 			}
 			&.active::after {
-				transform: rotate(-45deg);
+				transform: rotate(-405deg);
 				bottom: 9px;
 			}
 		}

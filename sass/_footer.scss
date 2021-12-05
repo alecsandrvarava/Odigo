@@ -13,7 +13,6 @@
 			flex-direction: column;
 		}
 	}
-
 	&__logo {
 		width: 200px;
 		& img {
@@ -30,7 +29,6 @@
 			}
 		}
 	}
-
 	&__items {
 		display: flex;
 		justify-content: space-between;
@@ -39,7 +37,6 @@
 			margin: 0 -10px;
 		}
 	}
-
 	&__item {
 		padding: 0 50px;
 		@media (max-width: 768px) {
@@ -50,8 +47,11 @@
 	}
 	&__list li {
 		margin-bottom: 10px;
+		transition: 0.3s;
 	}
-
+	&__list li:hover {
+		transform: scale(1.1);
+	}
 	&__list a {
 		color: $white;
 		font-size: $fz18;
