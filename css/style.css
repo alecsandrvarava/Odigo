@@ -605,7 +605,7 @@ h2 {
     margin-bottom: 40px;
     padding: 0 0 0 10px;
     width: calc(100% - 5px);
-    font-size: 16px;
+    font-size: 0.875rem;
   }
 }
 
@@ -682,7 +682,7 @@ h2 {
 
 @media (max-width: 767px) {
   .benefits-container {
-    padding: 0px 15px 0 15px;
+    padding: 0px 5px 0 5px;
     top: -60px;
   }
 }
@@ -717,6 +717,13 @@ h2 {
       flex-wrap: wrap;
   margin: 0 -25px;
   padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .benefits-body {
+    margin: 0;
+    padding: 0px;
+  }
 }
 
 .benefits-body__item {
@@ -754,7 +761,7 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 15px;
+    padding: 0;
   }
 }
 
@@ -771,7 +778,7 @@ h2 {
 }
 
 .benefits-body__item h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #000;
   margin-bottom: 30px;
 }
@@ -779,6 +786,7 @@ h2 {
 @media (max-width: 992px) {
   .benefits-body__item h4 {
     margin-bottom: 30px;
+    font-size: 1rem;
   }
 }
 
@@ -794,6 +802,7 @@ h2 {
 @media (max-width: 992px) {
   .benefits-body__item p {
     margin-bottom: 30px;
+    font-size: 0.875rem;
   }
 }
 
@@ -815,9 +824,9 @@ h2 {
 @media (max-width: 767px) {
   .benefits-body__left {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 20%;
-            flex: 1 1 20%;
-    margin-right: 45px;
+        -ms-flex: 1 1 40%;
+            flex: 1 1 40%;
+    margin-right: 15px;
     padding-left: 10px;
   }
 }
@@ -831,8 +840,8 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 80%;
-          flex: 1 1 80%;
+      -ms-flex: 1 1 60%;
+          flex: 1 1 60%;
 }
 
 .inspired {
@@ -1578,7 +1587,7 @@ h2 {
 
 @media (max-width: 768px) {
   .footer__items {
-    margin: 0 -10px;
+    margin: 0 -5px;
   }
 }
 
@@ -1588,11 +1597,13 @@ h2 {
 
 @media (max-width: 768px) {
   .footer__item {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 }
 
 .footer__list li {
+  width: 80px;
+  overflow: hidden;
   margin-bottom: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1611,7 +1622,7 @@ h2 {
 @media (max-width: 768px) {
   .footer__list a {
     margin-right: 15px;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
