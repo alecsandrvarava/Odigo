@@ -236,6 +236,8 @@ h2 {
 }
 
 .header__logo {
+  width: 90px;
+  height: 30px;
   margin-top: 50px;
   padding: 15px 5px;
 }
@@ -246,6 +248,13 @@ h2 {
     z-index: 10;
     margin-top: 15px;
   }
+}
+
+.header__logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container-flex {
