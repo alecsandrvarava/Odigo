@@ -4,7 +4,7 @@ AOS.init({
 	disable: 'tablet',
 	disable: 'mobile',
 	// disable: 'phone',
-	offset: 120,
+	offset: 20,
 });
 
 $(document).ready(function () {
